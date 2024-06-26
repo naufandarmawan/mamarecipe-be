@@ -4,6 +4,7 @@ const bcrypt = require("bcryptjs");
 const createHttpError = require("http-errors");
 const { response } = require("../herlpers/common");
 const { generateToken, gerateRefreshToken } = require("../herlpers/auth");
+const jwt = require('jsonwebtoken')
 
 const prisma = new PrismaClient();
 const login = async (req, res, next) => {
@@ -76,8 +77,27 @@ const logout = async (req, res, next) => {
   response(res, null, 200, "Logout Success");
 };
 
+const refreshToken = (req, res, next)=>{
+  
+  const refreshToken = req.body.refreshToken
+  const decoded = jwt.verify(refreshToken, process.env.SECRET_KEY_JWT)
+
+  const payload = {
+    email: decoded.email,
+    role: decoded.role
+  }
+
+  const data = {
+    token: generateToken(payload),
+    refreshToken: gerateRefreshToken(payload)
+  }
+  response(res, data, 200, 'Refresh Token Success')
+}
+
+
 module.exports = {
   register,
   login,
-  logout
+  logout,
+  refreshToken
 };

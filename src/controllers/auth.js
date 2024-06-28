@@ -74,6 +74,7 @@ const register = async (req, res, next) => {
 
 const logout = async (req, res, next) => {
   res.clearCookie("token");
+  res.end()
   response(res, null, 200, "Logout Success");
 };
 

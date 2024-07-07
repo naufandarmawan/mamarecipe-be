@@ -22,7 +22,7 @@
       <ul>
         <li><a href="#built-with">Built With</a></li>
         <li><a href="#features">Features</a></li>
-        <li><a href="#screenshots">Screeshots</a></li>
+        <li><a href="#project-structure">Project Structure</a></li>
       </ul>
     </li>
     <li>
@@ -67,7 +67,7 @@ Inspired by a 3,300% increase in Google searches for food menu inspiration in In
 
 
 
-## Features
+### Features
 
 * Account creation
 * Search and view recipe details
@@ -80,85 +80,45 @@ Inspired by a 3,300% increase in Google searches for food menu inspiration in In
 
 
 
-## Screenshots
+### Project Structure
 
-<table style="width: 100%; border-collapse: collapse;">
-  <colgroup>
-    <col style="width: 33.33%;">
-    <col style="width: 33.33%;">
-    <col style="width: 33.33%;">
-  </colgroup>
-  <tr>
-    <th style="padding: 8px; text-align: center; border: 1px solid #ddd;">Landing Page</th>
-    <th style="padding: 8px; text-align: center; border: 1px solid #ddd;">Login Page</th>
-    <th style="padding: 8px; text-align: center; border: 1px solid #ddd;">Register Page</th>
-  </tr>
-  <tr>
-    <td style="padding: 8px; text-align: left; border: 1px solid #ddd;">
-      <div style="width: 100%; height: 300px; overflow: hidden;">
-        <img src="./screenshots/screenshot-3.png" alt="Screenshot 1" style="width: 100%; height: 100%; object-fit: cover; object-position: top;">
-      </div>
-    </td>
-    <td style="padding: 8px; text-align: left; border: 1px solid #ddd;">
-      <div style="width: 100%; height: 300px; overflow: hidden;">
-        <img src="./screenshots/screenshot-4.png" alt="Screenshot 2" style="width: 100%; height: 100%; object-fit: cover; object-position: top;">
-      </div>
-    </td>
-    <td style="padding: 8px; text-align: left; border: 1px solid #ddd;">
-      <div style="width: 100%; height: 300px; overflow: hidden;">
-        <img src="./screenshots/screenshot-5.png" alt="Screenshot 3" style="width: 100%; height: 100%; object-fit: cover; object-position: top;">
-      </div>
-    </td>
-  </tr>
-  <tr>
-    <th style="padding: 8px; text-align: center; border: 1px solid #ddd;">Search Page</th>
-    <th style="padding: 8px; text-align: center; border: 1px solid #ddd;">Add Recipe Page</th>
-    <th style="padding: 8px; text-align: center; border: 1px solid #ddd;">Recipe Details Page</th>
-  </tr>
-  <tr>
-    <td style="padding: 8px; text-align: left; border: 1px solid #ddd;">
-      <div style="width: 100%; height: 300px; overflow: hidden;">
-        <img src="./screenshots/screenshot-6.png" alt="Screenshot 1" style="width: 100%; height: 100%; object-fit: cover; object-position: top;">
-      </div>
-    </td>
-    <td style="padding: 8px; text-align: left; border: 1px solid #ddd;">
-      <div style="width: 100%; height: 300px; overflow: hidden;">
-        <img src="./screenshots/screenshot-7.png" alt="Screenshot 2" style="width: 100%; height: 100%; object-fit: cover; object-position: top;">
-      </div>
-    </td>
-    <td style="padding: 8px; text-align: left; border: 1px solid #ddd;">
-      <div style="width: 100%; height: 300px; overflow: hidden;">
-        <img src="./screenshots/screenshot-8.png" alt="Screenshot 3" style="width: 100%; height: 100%; object-fit: cover; object-position: top;">
-      </div>
-    </td>
-  </tr>
-  <tr>
-    <th style="padding: 8px; text-align: center; border: 1px solid #ddd;">Saved Recipe Page</th>
-    <th style="padding: 8px; text-align: center; border: 1px solid #ddd;">Liked Recipe Page</th>
-    <th style="padding: 8px; text-align: center; border: 1px solid #ddd;">Edit Recipe Page</th>
-  </tr>
-  <tr>
-    <td style="padding: 8px; text-align: left; border: 1px solid #ddd;">
-      <div style="width: 100%; height: 300px; overflow: hidden;">
-        <img src="./screenshots/screenshot-1.png" alt="Screenshot 1" style="width: 100%; height: 100%; object-fit: cover; object-position: top;">
-      </div>
-    </td>
-    <td style="padding: 8px; text-align: left; border: 1px solid #ddd;">
-      <div style="width: 100%; height: 300px; overflow: hidden;">
-        <img src="./screenshots/screenshot-2.png" alt="Screenshot 2" style="width: 100%; height: 100%; object-fit: cover; object-position: top;">
-      </div>
-    </td>
-    <td style="padding: 8px; text-align: left; border: 1px solid #ddd;">
-      <div style="width: 100%; height: 300px; overflow: hidden;">
-        <img src="./screenshots/screenshot-9.png" alt="Screenshot 3" style="width: 100%; height: 100%; object-fit: cover; object-position: top;">
-      </div>
-    </td>
-  </tr>
-  <!-- Repeat similar rows for more screenshots -->
-</table>
+```
+└── 📁mamarecipe-be
+    └── .env.example
+    └── .gitignore
+    └── index.js
+    └── package-lock.json
+    └── package.json
+    └── 📁prisma
+        └── schema.prisma
+    └── README.md
+    └── 📁src
+        └── 📁controllers
+            └── auth.js
+            └── payment.js
+            └── recipes.js
+            └── upload.js
+            └── users.js
+        └── 📁herlpers
+            └── auth.js
+            └── common.js
+        └── 📁middlewares
+            └── auth.js
+            └── upload.js
+        └── 📁routes
+            └── auth.js
+            └── index.js
+            └── payment.js
+            └── recipes.js
+            └── upload.js
+            └── users.js
+        └── 📁utils
+            └── cloudinary.js
+    └── vercel.json
+    └── yarn.lock
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 ## Getting Started
@@ -180,11 +140,15 @@ Before starting, make sure you have npm installed. You can install it globally u
    ```sh
    git clone https://github.com/naufandarmawan/mamarecipe-be.git
    ```
-2. Install dependencies:
+2. Navigate into the project directory:
+   ```sh
+   cd mamarecipe-be
+   ```
+3. Install dependencies:
    ```sh
    npm install
    ```
-3. Set up environment variables:
+4. Set up environment variables:
    * Create a `.env` file in the root directory of your project.
    * Add your API key to the `.env` file:
    ```js
@@ -204,18 +168,18 @@ Before starting, make sure you have npm installed. You can install it globally u
 
 ### Development
 
-4. Start the development server:
+5. Start the development server:
    ```sh
    npm run dev
    ```
 
 ### Production
 
-5. Build the project:
+6. Build the project:
    ```sh
    npm run build
    ```
-6. Start the production server:
+7. Start the production server:
    ```sh
    npm run start
    ```
@@ -277,15 +241,6 @@ Here are some related projects and resources you may find helpful. These include
 </table>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 -----
